@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prediction</title>
+    {% load static %}
+  </head>
+  <body style="background-image:url('{% static 'dogback.jpg' %}');background-size:1300px 700px;background-repeat:no-repeat;">
+    <a href="{% url 'home' %}"><img src="{% static 'favicon.ico' %}" alt="home"></a>
+    <div style="color:white;font-size:40px;font-weight:bold;">
+    <p>Question 1 was : {{ques1}}</p>
+    <p>Question 2 was : {{ques2}}</p>
+    <p>
+      Hmmm... The probability of these questions having similar meaning is:
+      {{probability}}
+    </p>
+    </div>
+  </body>
+</html>
